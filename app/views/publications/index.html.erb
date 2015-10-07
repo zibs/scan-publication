@@ -1,0 +1,40 @@
+<!-- begin header -->
+<header class = "row">
+<h1><span class="logo"><em>SCAN</em></span> by CoLab</h1>
+</header>
+<section class="row">
+	<p class="col-md-12 dotter"></p>
+	<p class="col-md-12 dotterover"></p>
+</section>
+<!-- begin issues -->
+<article class="row issue-wrapper">
+	<h1 class = "col-md-offset-1">ISSUES</h1>
+	<section class="issue-list col-md-offset-1">
+		<ul>
+			<% @issues.each do | issue |%> 
+			<li class = "issue-btn">
+				<%= issue.title %> 
+				<%= link_to "(PDF)", "SCAN/#{issue.issue_file_file_name}", target: "_blank", class: "issue-link", id: "issue-#{issue.id}" %>
+				<i class="fa fa-caret-right care"></i>
+			</li>
+			<canvas id="canvas-issue-<%= issue.id%>"></canvas>
+			<% end %>
+		</ul>
+	</section>
+</article>
+<!-- exhibit issue -->
+<article class="row issue-info-wrapper">
+<% @issues.each do | issue | %>
+	<section class="col-md-10 col-md-offset-1 issue" id = "issue-<%= issue.id %>-info">
+		<% issue.essays.each do |essay| %>
+			<h3><%= essay.title %></h3>
+			<h4 class = "text-muted"><%= essay.author %></h5>
+		<% end %>
+	</section>
+<% end %>
+</article>
+
+
+
+
+
