@@ -14,7 +14,7 @@
 			<% @issues.each do | issue |%> 
 			<li class = "issue-btn">
 				<%= issue.title %> 
-				<%= link_to "(PDF)", "SCAN/#{issue.issue_file_file_name}", target: "_blank", class: "issue-link", id: "issue-#{issue.id}" %>
+				<%= link_to "(PDF)", issue.issue_file.url(:original, false), target: "_blank", class: "issue-link", id: "issue-#{issue.id}" %>
 				<i class="fa fa-caret-right care"></i>
 			</li>
 			<canvas id="canvas-issue-<%= issue.id%>"></canvas>
