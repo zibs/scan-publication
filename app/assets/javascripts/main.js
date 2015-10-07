@@ -58,6 +58,30 @@ $(".issue-btn").click(function() {
 // $("section.active-info").removeClass("active-info");
 		})
 	})
+
+// SCROLLTO
+$(document).ready(function() {
+	$(".issue-btn").click(function() {
+		var link = $(this).children()[0];
+		var issueInfo   = document.getElementById($(link).attr('id') + "-info");
+
+		if ( $(issueInfo).hasClass("active-info") ) {
+		
+		$('html, body').animate({
+        	scrollTop: $(issueInfo).offset().top
+   		 }, 1000);
+
+
+		} else {
+
+			return 
+    	
+   		 	
+		}
+	});
+});
+
+
 // TOGGLE CARET
 $(document).ready(function() {
 	$(".issue-btn").click(function() {

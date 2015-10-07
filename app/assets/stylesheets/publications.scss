@@ -15,10 +15,10 @@ body {
         color: grey;
         h1 {
             font-weight: 200;
-            font-size: 1.5em
+            font-size: 1.25em
         }
         .logo {
-            font-size: 6.5em;
+            font-size: 6.0em;
             font-weight: 300;
             margin-right: 0.5em;
             margin-left: 0.25em;
@@ -48,10 +48,8 @@ body {
         padding-left: 0;
         display: inline-block;
         li {
-            font-size: 1.45em;
+            font-size: 1.35em;
             margin: 4% 0;
-            
-
             &.issue-btn {
                 position: relative;
                 cursor: pointer;
@@ -72,30 +70,30 @@ body {
 .issue-info-wrapper {
     position: relative;
     margin-top: 120px;
+    
     .issue {
         background-color: #DBE0E2;
         position: absolute;
         border: 2px dashed black;
         display: none;
+        margin-bottom: 5%;
     }
     .active-info {
-    display: block;
-}
+        display: block;
+    }
 }
 
 .active-canvas {
     display: block;
 }
+
 .active-info {
     display: block;
 }
+
 canvas {
     position: absolute;
     display: none;
 }
 
-
-@media only screen and (max-width: 330px) {
-
-    
-    }
+@media only screen and (max-width: 330px) {}
