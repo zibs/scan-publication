@@ -1,0 +1,30 @@
+---
+pid: 13968
+config: !ruby/object:Puma::Configuration
+  cli_options: 
+  conf: 
+  options:
+    :min_threads: 1
+    :max_threads: 6
+    :quiet: false
+    :debug: false
+    :binds:
+    - unix:///home/raworth/scan/shared/sockets/puma.sock
+    :workers: 1
+    :daemon: false
+    :mode: :http
+    :before_fork: []
+    :worker_timeout: 60
+    :worker_shutdown_timeout: 30
+    :environment: production
+    :redirect_stdout: "/home/raworth/scan/shared/log/puma.stdout.log"
+    :redirect_stderr: "/home/raworth/scan/shared/log/puma.stderr.log"
+    :redirect_append: true
+    :pidfile: "/home/raworth/scan/shared/pids/puma.pid"
+    :state: "/home/raworth/scan/shared/pids/puma.state"
+    :control_url: unix:///tmp/puma-status-1444254862498-13968
+    :worker_directory: "/home/raworth/scan"
+    :config_file: config/puma.rb
+    :control_url_temp: "/tmp/puma-status-1444254862498-13968"
+    :control_auth_token: 9a14494a14d995ba79c4364dbdf6aee
+    :tag: scan

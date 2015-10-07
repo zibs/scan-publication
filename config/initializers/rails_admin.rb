@@ -13,7 +13,11 @@ RailsAdmin.config do |config|
 
   ## == PaperTrail ==
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
-
+config.authorize_with do
+    authenticate_or_request_with_http_basic('Site Message') do |username, password|
+      username == ENV["RAILSADMIN"] && password == ENV["RAILSADMINPASS"]
+    end
+  end
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
   config.actions do
