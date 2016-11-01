@@ -45,7 +45,7 @@ group :development do
   gem 'spring'
 end
 
-group :produciton do
+group :production do
 gem 'puma'
+gem 'rails_12factor', group: :production
 end
-
