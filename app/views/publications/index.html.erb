@@ -1,7 +1,7 @@
 <!-- begin header -->
 <header class = "row">
 <h1><span class="logo"><em>SCAN</em></span> by CoLab</h1>
-<p>SCAN is a contemporary art publication based in Winnipeg, MB.</p>
+<p class='margin-left'>SCAN is a contemporary art publication based in Winnipeg, MB.</p>
 </header>
 <section class="row">
 	<p class="col-md-12 dotter"></p>
@@ -12,9 +12,9 @@
 	<h1 class = "col-md-offset-1">ISSUES</h1>
 	<section class="issue-list col-md-offset-1">
 		<ul>
-			<% @issues.each do | issue |%> 
+			<% @issues.each do | issue |%>
 			<li class = "issue-btn">
-				<%= issue.title %> 
+				<%= issue.title %>
 				<%= link_to "(PDF)", issue.issue_file.url(:original, false), target: "_blank", class: "issue-link", id: "issue-#{issue.id}" %>
 				<i class="fa fa-caret-right care"></i>
 			</li>
@@ -34,8 +34,3 @@
 	</section>
 <% end %>
 </article>
-
-
-
-
-

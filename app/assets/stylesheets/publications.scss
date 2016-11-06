@@ -71,10 +71,15 @@ body {
     }
 }
 
+.margin-left {
+  margin-left: 5px;
+}
+
 .issue-info-wrapper {
     position: relative;
     margin-top: 120px;
-    
+    margin-bottom: 20px;
+
     .issue {
         background-color: #DBE0E2;
         position: absolute;
